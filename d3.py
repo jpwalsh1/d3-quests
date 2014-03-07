@@ -13,7 +13,6 @@ def getChars (bnet):
 	
 	characters = []
 	for char in json_profile["heroes"]:
-        	#print '{0} - {1}'.format(char['name'], char['id'])
 		characters.append(char['id'])
 		 
 	return characters
