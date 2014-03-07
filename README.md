@@ -6,8 +6,14 @@ Python script to check what quests in Act 1 your level 60 characters have not co
 # Usage #
     ./d3.py
 
-Script will prompt you for your battletag.
+# Sample Output #
 
-To Do:
+[d3-quests]$ ./d3.py
+Enter your Bnet ID, ex. Name#1234: Nicarras#1104
+BeardedNic - monk - Level 60
+Sword of the Stranger
+
+
+# To Do #
 Update script once the new RoS API is released.
 
