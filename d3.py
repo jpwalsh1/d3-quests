@@ -3,17 +3,17 @@
 import urllib2, json
 
 bnet = raw_input('Enter your Bnet ID, ex. Name#1234: ')
+region = raw_input('Enter your region. na/eu/kr: ')
 bnet = bnet.replace('#', '-')
+
 acts = ['act1', 'act2', 'act3', 'act4']
-
-
 act1 = ['The Fallen Star', 'The Legacy of Cain', 'A Shattered Crown', 'Reign of the Black King', 'Sword of the Stranger', 'The Broken Blade', 'The Doom in Wortham', 'Trailing the Coven', 'The Imprisoned Angel', 'Return to New Tristram']
 act2 = ['Shadows in the Desert', 'The Road to Alcarnus', 'City of Blood', 'A Royal Audience', 'Unexpected Allies', 'Betrayer of the Horadrim', 'Blood and Sand', 'The Black Soulstone', 'The Scouring of Caldeum', 'Lord of Lies']
 act3 = ['The Siege of Bastion\'s Keep', 'Turning the Tide', 'The Breached Keep', 'Tremors in the Stone', 'Machines of War', 'Siegebreaker', 'Heart of Sin']
 act4 = ['Fall of the High Heavens', 'The Light of Hope', 'Beneath the Spire', 'Prime Evil']
 
 def getChars (bnet):
-        url = 'http://us.battle.net/api/d3/profile/' + bnet + '/'
+        url = 'http://' + region + '.battle.net/api/d3/profile/' + bnet + '/'
 
         response = urllib2.urlopen(url)
         json_profile = json.load(response)
@@ -28,7 +28,7 @@ def getChars (bnet):
 def checkQuests (characters):
 
         for character in characters:
-                url = 'http://us.battle.net/api/d3/profile/' + bnet + '/hero/' + str(character)
+                url = 'http://' + region + '.battle.net/api/d3/profile/' + bnet + '/hero/' + str(character)
                 response = urllib2.urlopen(url)
                 json_char = json.load(response)
 
