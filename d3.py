@@ -3,7 +3,7 @@
 import urllib2, json
 
 bnet = raw_input('Enter your Bnet ID, ex. Name#1234: ')
-region = raw_input('Enter your region. na/eu/kr: ')
+region = raw_input('Enter your region. us/eu/kr: ')
 bnet = bnet.replace('#', '-')
 
 acts = ['act1', 'act2', 'act3', 'act4']
