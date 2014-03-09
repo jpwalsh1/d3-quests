@@ -5,6 +5,7 @@ import datetime
 
 bnet = raw_input('Enter your Bnet ID, ex. Name#1234: ')
 region = raw_input('Enter your region. us/eu/kr: ')
+char_filter = raw_input('Filter by character name(leave empty for all characters): ')
 bnet = bnet.replace('#', '-')
 
 acts = ['act1', 'act2', 'act3', 'act4']
@@ -26,6 +27,9 @@ def getChars (bnet):
         print
               
         for char in json_profile["heroes"]:
+                if char_filter:
+                        if char_filter.lower() != char['name'].lower():
+                                continue
                 characters.append(char['id'])
 
         return characters
