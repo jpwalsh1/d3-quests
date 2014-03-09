@@ -1,6 +1,7 @@
 #!/usr/bin/env python
 
 import urllib2, json
+import datetime
 
 bnet = raw_input('Enter your Bnet ID, ex. Name#1234: ')
 region = raw_input('Enter your region. us/eu/kr: ')
@@ -18,7 +19,12 @@ def getChars (bnet):
         response = urllib2.urlopen(url)
         json_profile = json.load(response)
 
-        characters = []
+        characters = [] 
+        print 'Last Updated:'
+        print datetime.datetime.fromtimestamp(int(json_profile['lastUpdated'])).strftime('%Y-%m-%d %H:%M:%S') 
+        print
+        print
+              
         for char in json_profile["heroes"]:
                 characters.append(char['id'])
 
