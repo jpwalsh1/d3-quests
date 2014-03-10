@@ -16,6 +16,5 @@ Sword of the Stranger
 ```
 
 # To Do #
-* Enable multi-region support
 * Update script once the new RoS API is released.
-
+* Sort out Unicode name issues
