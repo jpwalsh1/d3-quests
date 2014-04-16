@@ -1,9 +1,11 @@
 #!/usr/bin/env python
 
 import urllib2, json
+import datetime
 
 bnet = raw_input('Enter your Bnet ID, ex. Name#1234: ')
 region = raw_input('Enter your region. us/eu/kr: ')
+char_filter = raw_input('Filter by character name(leave empty for all characters): ')
 bnet = bnet.replace('#', '-')
 
 acts = ['act1', 'act2', 'act3', 'act4', 'act5']
@@ -19,8 +21,16 @@ def getChars (bnet):
         response = urllib2.urlopen(url)
         json_profile = json.load(response)
 
-        characters = []
+        characters = [] 
+        print 'Last Updated:'
+        print datetime.datetime.fromtimestamp(int(json_profile['lastUpdated'])).strftime('%Y-%m-%d %H:%M:%S') 
+        print
+        print
+              
         for char in json_profile["heroes"]:
+                if char_filter:
+                        if char_filter.lower() != char['name'].lower():
+                                continue
                 characters.append(char['id'])
 
         return characters
