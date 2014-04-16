@@ -24,8 +24,6 @@ def getChars (bnet):
         characters = [] 
         print 'Last Updated:'
         print datetime.datetime.fromtimestamp(int(json_profile['lastUpdated'])).strftime('%Y-%m-%d %H:%M:%S') 
-        print
-        print
               
         for char in json_profile["heroes"]:
                 if char_filter:
@@ -47,7 +45,7 @@ def checkQuests (characters):
                         completed = []
                         exec('total_quests = len(' + str(act) + ')')
                         if len(json_char['progression'][act]['completedQuests']) < total_quests and json_char['level'] == 70:
-                                print '{0} - {1} - Level {2} - {3}'.format(json_char['name'], json_char['class'], json_char['level'], act)
+                                print '\n{0} - {1} - Level {2} - {3}'.format(json_char['name'], json_char['class'], json_char['level'], act)
                                 for quest in json_char['progression'][act]['completedQuests']:
                                         completed.append(str(quest['name']))
 

@@ -14,12 +14,18 @@ Enter your Bnet ID, ex. Name#1234: Nicarras#1104
 Enter your region. us/eu/kr: us
 Filter by character name(leave empty for all characters):
 Last Updated:
-2014-03-09 04:59:13
-BeardedNic - monk - Level 60 - act1
-Sword of the Stranger
+2014-04-16 06:21:45
+
+Nic - demon-hunter - Level 70 - act5
+Breaching the Fortress
+The Pandemonium Gate
+The Harbinger
+The Battlefields of Eternity
+Souls of the Dead
+The Witch
+Angel of Death
 ...
 ```
 
 # To Do #
-* Update script once the new RoS API is released.
 * Sort out Unicode name issues
