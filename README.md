@@ -1,7 +1,7 @@
 d3-quests
 =========
 
-Python script to check what quests in all Acts of Normal mode your level 60s have notcompleted.
+Python script to check what quests in all Acts of Normal mode your level 70s have notcompleted.
 
 # Usage #
     ./d3.py
